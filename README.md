@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# Frontend
+## Documentation
+This project was bootstrapped with [MERN STACK](https://https://platzi.com/blog/que-es-mern-stack-javascript/).
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## `React Styled Components` 
+
+## Clean Architecture
+## | Mongo | Express | React | Node |
+### `Folders`
+
+src  
+  | assets     --> images  
+  | components --> aplication  
+  | resources  --> utils  
+  | styles     --> ui styles 
+----^
+### `Files with Node JS`
+
+src  
+  | index    
+  | routes    
+  | app    
+.gitignore --> Git repository configuration     
+Readme     --> Initial project documentation      
 
 ## Available Scripts
 
