@@ -1,0 +1,25 @@
+import imagen1 from "./imgs/img1.png"; 
+import imagen2 from "./imgs/img2.png";
+import imagen3 from "./imgs/img3.png";
+import perfil from "./imgs/profile.png";
+import logotipo from "./logo.svg";
+import logo from "./logo192.png";
+import fondoLogin from "./Gimnasio.jpg";
+import oscuro from "./moon.png";
+import claro from "./sun.png";
+import tamañoLetra from "./ltter.png";
+import fondo from "./Landing.jpg";
+import usuario from "./user.png";
+
+export const img1 = imagen1;
+export const img2 = imagen2;
+export const img3 = imagen3;
+export const profile = perfil;
+export const logoSVG = logotipo;
+export const logoPNG=logo;
+export const fondoGYM=fondoLogin;
+export const modeDark=oscuro;
+export const modeLight=claro;
+export const letterSize=tamañoLetra;
+export const landing = fondo;
+export const user = usuario;
