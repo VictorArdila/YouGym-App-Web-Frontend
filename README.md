@@ -11,20 +11,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## | Mongo | Express | React | Node |
 ### `Folders`
 
-src  
-  | assets     --> >images  
-  | components --> >aplication  
-  | resources  --> >utils  
-  | styles     --> >ui styles     
+**src**  
+  | **assets**     --> images  
+  | **components** --> aplication  
+  | **resources**  --> utils  
+  | **styles**     --> ui styles     
 ----^
 ### `Files with Node JS`
 
-src  
-  | index    
-  | routes    
-  | app    
-.gitignore --> >Git repository configuration       
-Readme     --> >Initial project documentation        
+**src**  
+  | **index**    
+  | **routes**    
+  | **app**    
+**.gitignore** --> Git repository configuration       
+**Readme**     --> Initial project documentation        
 
 ## Available Scripts
 

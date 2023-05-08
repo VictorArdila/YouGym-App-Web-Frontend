@@ -1,25 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { StyledGoogle } from "../../../resources/buttons/Buttons";
+import {gapi} from 'gapi-script';
+// import {AuthContext} from "../../../Context/AuthContext";
 
 const ApiGoogle = ({ color }) => {
   const [user, setUser] = useState(null);
-  const saveUserToJson = (user) => {
-    const data = JSON.stringify(user);
-    localStorage.setItem('User', data);
-  };
-  const responseGoogle = (response) => {
+  const clientId ="696938883956-tupkjer2kvn4cghlotk7781l38bi1n30.apps.googleusercontent.com";
+  
+  useEffect(() => {
+    const start = async () => {
+      await gapi.load("auth2", () => {
+        gapi.auth2.init({ client_id: clientId });
+      });
+    };
+    start();
+  }, []);
+  const responseGoogle = async (response) => {
     const user = response.profileObj;
-    saveUserToJson(user);
     setUser(user);
-    console.log(user); // Guarda el objeto de usuario en el estado del componente
+    user.tokenObj = response.tokenObj;
+    sessionStorage.setItem('user', JSON.stringify(user));
+    dashBoardSesion();
   };
+  const onFailure = (error) => {
+    console.log(error);
+  };
+  const signOut = async () => {
+    const auth2 = await gapi.auth2.getAuthInstance();
+    await auth2.signOut();
+    setUser(null);
+  };
+  const dashBoardSesion=()=>{
+    window.location.href = "/dashboard";
+  }
   return (
     <StyledGoogle
-      clientId="322568411120-qm8v464s7qok8qg79dk71jp2qesk9b76.apps.googleusercontent.com"
+      clientId={clientId}
       buttonText=""
       onSuccess={responseGoogle}
-      onFailure={responseGoogle}
+      onFailure={onFailure}
       cookiePolicy={"single_host_origin"}
+      scope="profile"
       background={color}
     />
   );

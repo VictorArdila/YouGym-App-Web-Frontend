@@ -274,15 +274,7 @@ export const ContainerProfileInfo = styled.div`
   height: auto;
   align-items: center;
 `;
-export const ContentPhtoInfo = styled.div`
-  display: flex;
-  width: 40%;
-  height: auto;
-  img {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-`;
+
 export const ContentUserInfo = styled.div`
   display: flex;
   flex-direction:column;

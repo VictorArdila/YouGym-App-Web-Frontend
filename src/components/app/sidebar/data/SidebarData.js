@@ -1,4 +1,5 @@
-import { logoSVG } from "../../../../assets/Resources";
+import React, { useContext } from "react";
+import { logoSVG } from "../../../../assets/Assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FlipIcon } from "../../../../resources/icons/Icons";
 import {
@@ -18,26 +19,44 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-export const profileArray = [
+const user = JSON.parse(sessionStorage.getItem('user'))|| [
   {
-    label: "Nombre",
-    icon: <FlipIcon icon={faDashboard} />,
+    img: "",
+    label: "",
     to: "#",
     subNav: [
       {
-        title: "Rol",
+        title: "",
         path: "#",
-        icon: <img src={logoSVG} alt="logo" />,
       },
       {
-        title: "Correo",
+        title: "",
         path: "#",
-        icon: <FontAwesomeIcon icon={faTwitter} />,
       },
       {
-        title: "TipoDeCuenta",
+        title: "",
         path: "#",
-        icon: <FontAwesomeIcon icon={faTwitter} />,
+      },
+    ],
+  },
+];
+export const profileArray = [
+  {
+    img: user.imageUrl,
+    label: user.name,
+    to: "#",
+    subNav: [
+      {
+        title: "user.rol",
+        path: "#",
+      },
+      {
+        title: user.email,
+        path: "#",
+      },
+      {
+        title: "user.TipoSesion",
+        path: "#",
       },
     ],
   },

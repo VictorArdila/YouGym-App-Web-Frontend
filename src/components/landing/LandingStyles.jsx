@@ -7,3 +7,8 @@ export const LandingContainer = styled.div`
   background-attachment: fixed;
   background-repeat: no-repeat;
 `;
+export const ContainerSection = styled.div`
+  display: flex;
+  width:100%;
+  height:fit-content;
+`;

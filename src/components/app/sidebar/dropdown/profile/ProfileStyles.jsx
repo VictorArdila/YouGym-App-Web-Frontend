@@ -72,3 +72,23 @@ export const DropdownLink = styled(Link)`
     cursor: pointer;
   }
 `;
+export const ContentPhtoInfo = styled.div`
+  display: flex;
+  width: 40%;
+  height: auto;
+  border: none;
+  border-radius: 25px;
+  align-items: center;
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 25px;
+  }
+`;
+export const ContentUserInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+`;

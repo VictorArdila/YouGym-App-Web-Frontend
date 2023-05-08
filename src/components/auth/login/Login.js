@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button} from '../../../resources/buttons/Buttons';
 import {Icon} from '../../../resources/icons/Icons';
 import Input from '../../../resources/inputs/Input';
 import Label from '../../../resources/labels/Label';
-import { logoPNG } from '../../../assets/Resources';
-import { fondoGYM } from '../../../assets/Resources';
+import { logoPNG, fondoGYM } from '../../../assets/Assets';
 import {
   Container,
   MainContainer,
@@ -53,7 +52,7 @@ const Login = ({ children }) => {
           <Icon color={FacebookBackground}>
             <FontAwesomeIcon icon={faFacebook} />
           </Icon>
-          <ApiGoogle color={GoogleBackground}/>
+          <ApiGoogle color={GoogleBackground} />
           <Icon color={TwitterBackground}>
             <FontAwesomeIcon icon={faTwitter} />
           </Icon>

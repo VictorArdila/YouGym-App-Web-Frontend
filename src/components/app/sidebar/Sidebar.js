@@ -10,10 +10,8 @@ import {
   SToggleThumb,
   IconModeTheme,
   ContainerProfileInfo,
-  ContentPhtoInfo,
-  ContentUserInfo,
 } from "./SidebarStyles.jsx";
-import { logoPNG, modeDark, modeLight, user } from "../../../assets/Resources";
+import { logoPNG, modeDark, modeLight } from "../../../assets/Assets";
 import {
   profileArray,
   linksArray,
@@ -27,7 +25,7 @@ import { faAngleLeft, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ThemeContext } from "../../../App";
 
-const Sidebar = () => {
+const Sidebar = ({ user }) => {
   const [expanded, setExpaned] = useState(true);
   const { setTheme, theme } = useContext(ThemeContext);
   const [changeTheme, setChangeTheme] = useState(false);
@@ -63,14 +61,9 @@ const Sidebar = () => {
         </ContainerLogo>
         <Divider />
         <ContainerProfileInfo>
-          <ContentPhtoInfo>
-            <img src={user} alt="logo" />
-          </ContentPhtoInfo>
-          <ContentUserInfo>
-            {profileArray.map((item, index) => {
-              return <Profile isOpen={expanded} item={item} key={index} />;
-            })}
-          </ContentUserInfo>
+          {profileArray.map((item, index) => {
+            return <Profile isOpen={expanded} item={item} key={index} />;
+          })}
         </ContainerProfileInfo>
         <ContainerMenu>
           <Divider />

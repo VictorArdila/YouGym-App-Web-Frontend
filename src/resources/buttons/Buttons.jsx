@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import GoogleLogin from 'react-google-login';
+import {GoogleLogin} from 'react-google-login';
 
 export const Button = ({ content }) => {
   return <StyledButton>{content}</StyledButton>;
