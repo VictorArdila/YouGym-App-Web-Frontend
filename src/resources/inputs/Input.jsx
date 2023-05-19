@@ -15,7 +15,7 @@ const StyledInput = styled.input`
   outline: none;
   color: #000000;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   &:focus {
     display: inline-block;
     box-shadow: 0 0 0 0.2rem rgba(125, 5, 5, 0.45);
@@ -23,8 +23,8 @@ const StyledInput = styled.input`
     border-radius: 2rem;
   }
   &::placeholder {
-    color: rgba(255, 255, 255, 0.65);
-    font-weight: 100;
+    color: rgba(25, 25, 25, 0.65);
+    font-weight: 600;
     font-size: 1rem;
   }
 `;

@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
 
 export const HeaderContainer = styled.div`
   display: flex;
-  width: 100vw;
+  position: fixed;
+  width: 100%;
   height: 3rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: ${props => props.backgroundColor};
+  transition: background-color 0.3s ease;
 `;
 export const ContainerLogo = styled.div`
   display: flex;
@@ -59,6 +60,9 @@ export const ContainerButtonSocial = styled.div`
   justify-content: center;
   :hover {
     background: ${(props) => props.background};
+    svg {
+      color: white;
+    }
   }
 `;
 export const ContainerButtonSign = styled.div`
@@ -88,7 +92,7 @@ export const ButtoItemMenu = styled.div`
     border: none;
     border-radius: 8px;
     background-color: ${({ theme }) => theme.glass};
-    color:black;
+    color: black;
   }
 `;
 export const ButtonSocial = styled(FontAwesomeIcon)`
@@ -97,9 +101,6 @@ export const ButtonSocial = styled(FontAwesomeIcon)`
   height: 1.2rem;
   align-items: center;
   justify-content: center;
-  :hover{
-    color:white;
-  }
 `;
 export const ButtonSign = styled.div`
   display: flex;

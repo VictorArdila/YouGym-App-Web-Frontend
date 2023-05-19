@@ -18,7 +18,7 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Header = () => {
+const Header = ({ backgroundColor }) => {
   const colorFacebook =
     "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
   const colorWhatsapp =
@@ -26,8 +26,14 @@ const Header = () => {
   const labelYouGym = "linear-gradient(to right, #B03535 0%, #201F1F 50%)";
   const colorInstagram =
     "linear-gradient(to right, #A12AC4 0%, #ED586C 40%, #F0A853 100%)";
+  const linkFacebook = () => {
+    window.open("https://www.facebook.com/BlueCodeFullStack", "_blank"); // URL de la página de Facebook que deseas redireccionar
+  };
+  const linkInstagram = () => {
+    window.open("https://www.instagram.com/bluecode_full_stack/", "_blank"); // URL de la página de Facebook que deseas redireccionar
+  };
   return (
-    <HeaderContainer>
+    <HeaderContainer backgroundColor={backgroundColor}>
       <ContainerLogo>
         <span>
           You<span>G</span>ym
@@ -48,14 +54,20 @@ const Header = () => {
           <DividerItem />
         </ConytainerItems>
         <ContainerSocial>
-          <ContainerButtonSocial background={colorInstagram}>
-            <ButtonSocial icon={faInstagram} />
+          <ContainerButtonSocial
+            background={colorInstagram}
+            onClick={linkInstagram}
+          >
+            <ButtonSocial icon={faInstagram} onClick={linkInstagram} />
           </ContainerButtonSocial>
           <ContainerButtonSocial background={colorWhatsapp}>
             <ButtonSocial icon={faWhatsapp} />
           </ContainerButtonSocial>
-          <ContainerButtonSocial background={colorFacebook}>
-            <ButtonSocial icon={faFacebook} />
+          <ContainerButtonSocial
+            background={colorFacebook}
+            onClick={linkFacebook}
+          >
+            <ButtonSocial icon={faFacebook} onClick={linkFacebook} />
           </ContainerButtonSocial>
         </ContainerSocial>
         <ContainerButtonSign>
