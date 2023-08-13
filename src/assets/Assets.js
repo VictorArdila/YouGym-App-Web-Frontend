@@ -17,6 +17,7 @@ import silueta1 from "./imgs/silueta1.png";
 import silueta2 from "./imgs/silueta2.png";
 import silueta3 from "./imgs/silueta3.png";
 import silueta4 from "./imgs/silueta4.png";
+import logoEmpresa from "./icons/MyIcon_white.png";
 
 export const img1 = imagen1;
 export const img2 = imagen2;
@@ -34,3 +35,4 @@ export const silhouette = silueta1;
 export const silhouette2 = silueta2;
 export const silhouette3 = silueta3;
 export const silhouette4 = silueta4;
+export const logoWhite = logoEmpresa;

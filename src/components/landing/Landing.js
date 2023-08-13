@@ -7,13 +7,64 @@ import {
   SectionThree,
   SectionFour,
   Paragraph,
-  Silhouette
+  Silhouette,
+  TitleTag,
 } from "./LandingStyles";
-import { landing, silhouette, silhouette2, silhouette3, silhouette4 } from "../../assets/Assets";
+import {
+  landing,
+  silhouette,
+  silhouette2,
+  silhouette3,
+  silhouette4,
+} from "../../assets/Assets";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 
 const Landing = () => {
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [index, setIndex] = useState(1);
+  const toRotate = [ "Una solución para gestionar tu gimnasio.", "Tu asistente virtual de gimnasio.", "La forma moderna de administrar tu centro fitness." ];
+  const period = 2000;
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text]);
+
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
+
+    setText(updatedText);
+
+    if (isDeleting) {
+      setDelta((prevDelta) => prevDelta / 2);
+    }
+
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setIndex((prevIndex) => prevIndex - 1);
+      setDelta(period);
+    } else if (isDeleting && updatedText === "") {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setIndex(1);
+      setDelta(500);
+    } else {
+      setIndex((prevIndex) => prevIndex + 1);
+    }
+  };
   const [headerBackground, setHeaderBackground] = useState("transparent");
 
   useEffect(() => {
@@ -38,11 +89,23 @@ const Landing = () => {
       <ContainerSection>
         <SectionOne>
           <Paragraph>
-            <h2>Section One</h2>
+            <TitleTag>
+              <h3>YouGym App</h3>
+            </TitleTag>
+            <h1>
+              {`¡YouGym!`}{" "}
+              <span
+                className="txt-rotate"
+                dataPeriod="1000"
+                data-rotate='[ "Una solución para gestionar tu gimnasio.", "Tu asistente virtual de gimnasio.", "La forma moderna de administrar tu centro fitness." ]'
+              >
+                <span className="wrap">{text}</span>
+              </span>
+            </h1>
             <p>Section One</p>
           </Paragraph>
           <Silhouette>
-           <img src={silhouette} alt="silhouette" />
+            <img src={silhouette} alt="silhouette" />
           </Silhouette>
         </SectionOne>
         <SectionTwo>
@@ -51,7 +114,7 @@ const Landing = () => {
             <p>Section Two</p>
           </Paragraph>
           <Silhouette>
-           <img src={silhouette2} alt="silhouette2" />
+            <img src={silhouette2} alt="silhouette2" />
           </Silhouette>
         </SectionTwo>
         <SectionThree>
@@ -60,7 +123,7 @@ const Landing = () => {
             <p>Section Three</p>
           </Paragraph>
           <Silhouette>
-           <img src={silhouette3} alt="silhouette3" />
+            <img src={silhouette3} alt="silhouette3" />
           </Silhouette>
         </SectionThree>
         <SectionFour>
@@ -69,7 +132,7 @@ const Landing = () => {
             <p>Section Four</p>
           </Paragraph>
           <Silhouette>
-           <img src={silhouette4} alt="silhouette4" />
+            <img src={silhouette4} alt="silhouette4" />
           </Silhouette>
         </SectionFour>
       </ContainerSection>

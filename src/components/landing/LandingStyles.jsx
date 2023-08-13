@@ -67,3 +67,13 @@ export const Silhouette = styled.div`
     height: 85%;
   }
 `;
+export const TitleTag = styled.div`
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(130, 5, 5, 0.5) -5.91%, rgba(26, 26, 26, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+`;
