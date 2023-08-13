@@ -26,7 +26,7 @@ const Landing = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Una solución para gestionar tu gimnasio.", "Tu asistente virtual de gimnasio.", "La forma moderna de administrar tu centro fitness." ];
+  const toRotate = [ "Una solución para gestionar tu gimnasio.", "Tu asistente virtual de gimnasio.", "La forma moderna de administrar tu negocio." ];
   const period = 2000;
 
   useEffect(() => {
@@ -97,12 +97,12 @@ const Landing = () => {
               <span
                 className="txt-rotate"
                 dataPeriod="1000"
-                data-rotate='[ "Una solución para gestionar tu gimnasio.", "Tu asistente virtual de gimnasio.", "La forma moderna de administrar tu centro fitness." ]'
+                data-rotate='[ "Una solución para gestionar tu gimnasio.", "Tu asistente virtual de gimnasio.", "La forma moderna de administrar tu negocio." ]'
               >
                 <span className="wrap">{text}</span>
               </span>
             </h1>
-            <p>Section One</p>
+            <p>YouGym es una innovadora aplicación web diseñada para revolucionar la gestión integral de gimnasios y centros de fitness. Nuestra plataforma ofrece un conjunto completo de herramientas y funcionalidades que permiten a los propietarios y administradores de gimnasios optimizar sus operaciones diarias de manera eficiente y efectiva. Con YouGym, puedes gestionar clientes de manera fluida, llevar un registro detallado de servicios como caja registradora y productos disponibles en el gimnasio, así como ofrecer planes de ejercicio personalizados con un seguimiento diario y exhaustivo. Nuestra misión es proporcionar una solución integral que potencie la experiencia tanto de los usuarios como del personal del gimnasio, simplificando las tareas administrativas y mejorando la interacción entre entrenadores y clientes. YouGym, tu aliado en la excelencia en la gestión de centros de fitness.</p>
           </Paragraph>
           <Silhouette>
             <img src={silhouette} alt="silhouette" />

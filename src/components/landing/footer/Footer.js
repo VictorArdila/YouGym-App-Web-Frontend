@@ -80,6 +80,7 @@ const Footer = () => {
             <input type="text" placeholder="Nombre" />
             <input type="text" placeholder="Correo" />
             <textarea placeholder="Mensaje" />
+            <button>Enviar</button>
           </FooterContact>
         </FooterRight>
       </FooterLayout>

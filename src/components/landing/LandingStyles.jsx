@@ -49,10 +49,13 @@ title{
   text-align: center;
 }
 p{
+  padding-top: 20px;
+  padding-right:50px;
+  padding-left:50px;
   color: ${({ theme }) => theme.text};
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 100;
-  text-align: center;
+  text-align: justify;
 }
 `;
 export const Silhouette = styled.div`

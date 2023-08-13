@@ -92,4 +92,12 @@ export const FooterContact = styled.div`
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  button{
+    width: 30%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 `;
