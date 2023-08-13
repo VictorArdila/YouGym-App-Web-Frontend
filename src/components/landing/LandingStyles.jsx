@@ -36,3 +36,34 @@ export const SectionFour = styled.div`
   height:90vh;
   background-color: ${({ theme }) => theme.bgSectionTypeTwo};
 `;
+export const Paragraph = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 60%;
+title{
+  color: ${({ theme }) => theme.text};
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+p{
+  color: ${({ theme }) => theme.text};
+  font-size: 18px;
+  font-weight: 100;
+  text-align: center;
+}
+`;
+export const Silhouette = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40%;
+  justify-content:end;
+  align-items: center;
+  img{
+    width: 78%;
+    height: 85%;
+  }
+`;

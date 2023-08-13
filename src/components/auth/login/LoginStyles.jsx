@@ -57,7 +57,7 @@ export const MainContainer = styled.div`
     height: 90vh;
   }
   img {
-    height: 60px;
+    height: 170px;
   }
 `;
 

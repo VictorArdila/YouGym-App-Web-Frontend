@@ -6,7 +6,7 @@ export default function Input({ type, placeholder }) {
 const StyledInput = styled.input`
   margin-bottom: 0.5rem;
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(125, 5, 5, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(30, 30, 30, 0.37);
   border-radius: 2rem;
   width: 80%;
   height: 3rem;
@@ -18,7 +18,7 @@ const StyledInput = styled.input`
   font-weight: 600;
   &:focus {
     display: inline-block;
-    box-shadow: 0 0 0 0.2rem rgba(125, 5, 5, 0.45);
+    box-shadow: 0 0 0 0.2rem rgba(43, 43, 43, 0.45);
     backdrop-filter: blur(12rem);
     border-radius: 2rem;
   }

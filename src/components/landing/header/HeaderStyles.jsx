@@ -19,11 +19,11 @@ export const ContainerLogo = styled.div`
   justify-content: center;
   align-items: center;
   span {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 500;
     color: ${({ theme }) => theme.background};
     span {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 600;
       color: ${({ theme }) => theme.Selector};
     }

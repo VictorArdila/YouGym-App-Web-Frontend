@@ -4,6 +4,7 @@ export const lightTheme = {
     bgSectionTypeTwo: "rgba(50,50,50,.6)",
     background: "rgb(255,255,255)",
     glass:"rgba(225, 225, 225, 0.64)",
+    text:"rgb(255,255,255)",
     //Sidebar
     bg: "rgba(50,50,50,.2)",
     solidBg: "rgba(50,50,50,.9)",
@@ -33,13 +34,13 @@ export const lightTheme = {
     bgDrpdown: "rgba(30,30,30,.7)",
     //Container
     bg2: "rgb(225,225,225,.9)",
-    text: "rgb(15,15,15)",
     //DashBoard CatchTweets
     bgDashCatchTweets: "rgb(255,255,255)",
 };
 export const darkTheme = {
     background: "rgb(40,40,40)",
     glass:"rgba(25, 25, 25, 0.54)",
+    text:"rgb(255,255,255)",
     //Sidebar
     bg: "rgb(16,16,16)",
     solidBg: "rgba(16,16,16,.9)",
