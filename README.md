@@ -7,4 +7,7 @@ YouGym App plataforma web orientado a la administracion de gimnasios en el que p
 
 ## `Landing page`
 
+![image](https://github.com/VictorArdila/YouGym-App-Web-Frontend/assets/89551043/bcf41a3e-09dd-4d04-9428-bf0694ba035a)
+
+
 
