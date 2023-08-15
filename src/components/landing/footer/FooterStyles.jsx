@@ -46,11 +46,15 @@ export const Footertitle = styled.div`
     margin-right: 5px;
     height: 50px;
     width: 50px;
+    cursor: pointer;
   }
   svg {
     margin-right: 5px;
     height: 25px;
     width: 25px;
+  }
+  h3{
+    cursor: pointer;
   }
 `;
 export const FooterText = styled.div`
@@ -68,6 +72,7 @@ export const FooterSocial = styled.div`
     margin-bottom: 10px;
     height: 25px;
     width: 25px;
+    cursor: pointer;
   }
 `;
 export const FooterContact = styled.div`
@@ -99,5 +104,6 @@ export const FooterContact = styled.div`
     border: none;
     margin-top: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
   }
 `;

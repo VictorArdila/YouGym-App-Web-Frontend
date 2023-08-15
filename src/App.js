@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AuthProvider } from "./Context/AuthContext";
 import { Helmet } from "react-helmet";
 import { ThemeProvider } from "styled-components";
 import LayoutApp from "./components/layout/LayoutApp";
@@ -26,11 +25,9 @@ const App = () => {
           />
         </Helmet>
         <>
-          <AuthProvider>
-            <LayoutApp>
+        <LayoutApp>
               <Routes />
             </LayoutApp>
-          </AuthProvider>
         </>
       </ThemeProvider>
     </ThemeContext.Provider>

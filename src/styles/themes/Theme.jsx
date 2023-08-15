@@ -1,10 +1,13 @@
 export const lightTheme = {
     //Landing Page
+    bgSectionTypePresentation: "rgb(15,15,15, 0.9)",
     bgSectionTypeOne: "rgb(15,15,15, 0.7)",
     bgSectionTypeTwo: "rgba(50,50,50,.6)",
     background: "rgb(255,255,255)",
     glass:"rgba(225, 225, 225, 0.64)",
     text:"rgb(255,255,255)",
+    text2:"rgb(15,15,15)",
+    text3:"rgb(130,5,5)",
     //Sidebar
     bg: "rgba(50,50,50,.2)",
     solidBg: "rgba(50,50,50,.9)",

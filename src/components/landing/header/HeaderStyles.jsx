@@ -119,4 +119,5 @@ export const ButtonSign = styled.div`
     border-radius: 4px;
     background: ${(props) => props.background};
   }
+  cursor: pointer;
 `;

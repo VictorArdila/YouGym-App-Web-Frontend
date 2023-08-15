@@ -49,13 +49,13 @@ const Login = ({ children }) => {
         <LoginWith>O INICIA CON</LoginWith>
         <HorizontalRule />
         <IconsContainer>
-          <Icon color={FacebookBackground}>
+          {/* <Icon color={FacebookBackground}>
             <FontAwesomeIcon icon={faFacebook} />
-          </Icon>
+          </Icon> */}
           <ApiGoogle color={GoogleBackground} />
-          <Icon color={TwitterBackground}>
+          {/* <Icon color={TwitterBackground}>
             <FontAwesomeIcon icon={faTwitter} />
-          </Icon>
+          </Icon> */}
         </IconsContainer>
         <HiperLink>¿No tienes cuenta? crea una</HiperLink>
         <LabelYouGym>
