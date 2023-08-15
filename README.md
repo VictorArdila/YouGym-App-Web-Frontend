@@ -5,3 +5,5 @@
 ## `Descripcion`
 YouGym App plataforma web orientado a la administracion de gimnasios frontend. React Styled components
 
+## `Landing page`
+
