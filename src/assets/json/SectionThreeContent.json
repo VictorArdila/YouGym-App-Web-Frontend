@@ -1,117 +1,139 @@
 {
     "title": "Servicios que ofrecemos",
+    "parragraph": "Aqui sabemos que tu negocio es lo mas importante, por eso nos interesamos en brindarte lo mejor. Conoce los servicios que ofrecemos para tu negocio.",
     "services":[
         {
             "serviceTitle":"Gestión de Caja Registradora",
             "serviceDescription":"Administra tus transacciones y efectivo de manera eficiente.",
             "category":"Caja Registradora",
-            "plan":"Básico"
+            "plan":"🟠 Básico",
+            "icon":"faCashRegister"
         },
         {
             "serviceTitle":"Gestión de Clientes",
             "serviceDescription":"Mantén un registro organizado de tus clientes y su información.",
             "category":"Clientes",
-            "plan":"Básico"
+            "plan":"🟠 Básico",
+            "icon":"faUsers"
         },
         {
             "serviceTitle":"Gestión de Productos",
             "serviceDescription":"Administra tus productos y controla tu inventario.",
             "category":"Productos",
-            "plan":"Básico"
+            "plan":"🟠 Básico",
+            "icon":"faBox"
         },
         {
             "serviceTitle":"Gestión de Planes",
             "serviceDescription":"Crea y gestiona diferentes planes y suscripciones.",
             "category":"Planes",
-            "plan":"Básico"
+            "plan":"🟠 Básico",
+            "icon":"faBottleWater"
         },
         {
             "serviceTitle":"Gestión de Entrenadores",
-            "serviceDescription":"Coordina y programa sesiones con entrenadores."
+            "serviceDescription":"Coordina y programa sesiones con entrenadores.",
+            "category":"Entrenadores",
+            "plan":"🟠 Básico",
+            "icon":"faUserNinja"
         },
         {
             "serviceTitle":"Gestión de Empleados",
             "serviceDescription":"Organiza a tu equipo de trabajo de forma efeiciente.",
             "category":"Empleados",
-            "plan":"Básico"
+            "plan":"🟠 Básico",
+            "icon":"faUserTie"
         },
         {
             "serviceTitle":"Gestión de Horarios",
             "serviceDescription":"Crea y gestiona horarios de clases y sesiones.",
             "category":"Horarios",
-            "plan":"Básico"
+            "plan":"🟠 Básico",
+            "icon":"faCalendar"
         },
         {
             "serviceTitle":"Gestión de Pagos",
             "serviceDescription":"Administra los pagos de tus clientes y suscripciones.",
             "category":"Pagos",
-            "plan":"Básico"
+            "plan":"🟠 Básico",
+            "icon":"faCreditCard"
         },
         {
             "serviceTitle":"Gestión de Reportes",
             "serviceDescription":"Obtén reportes de tus transacciones y clientes.",
             "category":"Reportes",
-            "plan":"Élite"
+            "plan":"🟢 Élite",
+            "icon":"faReceipt"
         },
         {
             "serviceTitle":"Gestión de Promociones",
             "serviceDescription":"Crea y gestiona promociones para tus clientes.",
             "category":"Promociones",
-            "plan":"Élite"
+            "plan":"🟢 Élite",
+            "icon":"faGift"
         },
         {
             "serviceTitle":"Gestión de Membresías",
             "serviceDescription":"Crea y gestiona membresías para tus clientes.",
             "category":"Membresías",
-            "plan":"Élite"
+            "plan":"🟢 Élite",
+            "icon":"faUsersRays"
         },
         {
             "serviceTitle":"Gestión de Clases",
             "serviceDescription":"Crea y gestiona clases para tus clientes.",
             "category":"Clases",
-            "plan":"Élite"
+            "plan":"🟢 Élite",
+            "icon":"faGraduationCap"
         },
         {
             "serviceTitle":"Gestión de Sesiones",
             "serviceDescription":"Crea y gestiona sesiones para tus clientes.",
             "category":"Sesiones",
-            "plan":"Élite"
+            "plan":"🟢 Élite",
+            "icon":"faDumbbell"
         },
         {
             "serviceTitle":"Gestión de Citas",
             "serviceDescription":"Crea y gestiona citas para tus clientes.",
             "category":"Citas",
-            "plan":"Premium"
+            "plan":"🔵 Premium",
+            "icon":"faCalendarCheck"
         },
         {
             "serviceTitle":"Gestión de Notificaciones",
             "serviceDescription":"Envía notificaciones a tus clientes y empleados.",
             "category":"Notificaciones",
-            "plan":"Premium"
+            "plan":"🔵 Premium",
+            "icon":"faBell"
         },
         {
             "serviceTitle":"Gestión de Permisos",
             "serviceDescription":"Administra los permisos de tus empleados.",
             "category":"Permisos",
-            "plan":"Premium"
+            "plan":"🔵 Premium",
+            "icon":"faCommentDots"
         },
         {
             "serviceTitle":"Gestión de Roles",
             "serviceDescription":"Crea y gestiona roles para tus empleados.",
             "category":"Roles",
-            "plan":"Premium"
+            "plan":"🔵 Premium",
+            "icon":"faBriefcase"
         },
         {
             "serviceTitle":"Gestión de Usuarios",
             "serviceDescription":"Crea y gestiona usuarios para tu cuenta.",
             "category":"Usuarios",
-            "plan":"Premium"
+            "plan":"🔵 Premium",
+            "icon":"faUsersViewfinder"
         },
         {
             "serviceTitle":"Gestión de Soporte",
             "serviceDescription":"Obtén soporte y ayuda para tu cuenta.",
             "category":"Soporte",
-            "plan":"Premium"
+            "plan":"🔵 Premium",
+            "icon":"faHeadset"
         }
     ]
 }

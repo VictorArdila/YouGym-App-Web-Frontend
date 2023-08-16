@@ -28,10 +28,15 @@ import {
   ForumTitle,
   ForumBody,
   ServicesContainer,
+  ServiceForm,
+  ServiceListWrapper,
   ServiceList,
   ServiceItem,
   ServiceTitle,
   ServiceDescription,
+  ItemCategory,
+  ItemIcon,
+  ScrollArrow,
 } from "./LandingStyles";
 import {
   landing,
@@ -53,8 +58,28 @@ import Footer from "./footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDoubleDown,
+  faAngleDoubleLeft,
+  faAngleDoubleRight,
   faAngleDoubleUp,
+  faCashRegister,
   faDumbbell,
+  faUsers,
+  faBox,
+  faBottleWater,
+  faUserNinja,
+  faUserTie,
+  faCalendar,
+  faCreditCard,
+  faReceipt,
+  faGift,
+  faUsersRays,
+  faGraduationCap,
+  faCalendarCheck,
+  faBell,
+  faCommentDots,
+  faBriefcase,
+  faUsersViewfinder,
+  faHeadset,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Landing = () => {
@@ -69,10 +94,9 @@ const Landing = () => {
   const [textPresentation, setText] = useState("");
   const [delta, setDelta] = useState(120 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-
   const toRotate = [sectionIntroContent.phrase];
-
   const period = 1500;
+  const listRef = useRef(null);
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -127,6 +151,38 @@ const Landing = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const scrollLeft = () => {
+    if (listRef.current) {
+      listRef.current.scrollLeft -= 100;
+    }
+  };
+
+  const scrollRight = () => {
+    if (listRef.current) {
+      listRef.current.scrollLeft += 100;
+    }
+  };
+  const faIcons = {
+    faCashRegister,
+    faUsers,
+    faBox,
+    faBottleWater,
+    faUserNinja,
+    faUserTie,
+    faCalendar,
+    faCreditCard,
+    faReceipt,
+    faGift,
+    faUsersRays,
+    faGraduationCap,
+    faDumbbell,
+    faCalendarCheck,
+    faBell,
+    faCommentDots,
+    faBriefcase,
+    faUsersViewfinder,
+    faHeadset,
+  };
   return (
     <LandingContainer style={{ backgroundImage: `url(${landing})` }}>
       <Header
@@ -185,17 +241,39 @@ const Landing = () => {
           </Silhouette>
         </SectionTwo>
         <SectionThree ref={sectionThreeRef}>
-          <ServicesContainer>
-            <h1>{sectionThreeContent.title}</h1>
-            <ServiceList>
-              {sectionThreeContent.services.map((service, index) => (
-                <ServiceItem key={index}>
-                  <ServiceTitle>{service.serviceTitle}</ServiceTitle>
-                  <ServiceDescription>{service.serviceDescription}</ServiceDescription>
-                </ServiceItem>
-              ))}
-            </ServiceList>
-          </ServicesContainer>
+          <Container>
+            <ServicesContainer>
+              <Paragraph>
+                <h1>{sectionThreeContent.title}</h1>
+                <p>{sectionThreeContent.parragraph}</p>
+              </Paragraph>
+              <ServiceForm>
+                <ScrollArrow onClick={scrollLeft}>
+                  <FontAwesomeIcon icon={faAngleDoubleLeft} fade />
+                </ScrollArrow>
+                <ServiceListWrapper ref={listRef}>
+                  <ServiceList>
+                    {sectionThreeContent.services.map((service, index) => (
+                      <ServiceItem key={index}>
+                        <ServiceTitle>{service.serviceTitle}</ServiceTitle>
+                        <ServiceDescription>
+                          {service.serviceDescription}
+                        </ServiceDescription>
+                        <ItemCategory>{service.category}</ItemCategory>
+                        <ItemCategory>{service.plan}</ItemCategory>
+                        <ItemIcon>
+                          <FontAwesomeIcon icon={faIcons[service.icon]} />
+                        </ItemIcon>
+                      </ServiceItem>
+                    ))}
+                  </ServiceList>
+                </ServiceListWrapper>
+                <ScrollArrow onClick={scrollRight}>
+                  <FontAwesomeIcon icon={faAngleDoubleRight} fade />
+                </ScrollArrow>
+              </ServiceForm>
+            </ServicesContainer>
+          </Container>
           <Silhouette>
             <img src={silhouette3} alt="silhouette3" />
           </Silhouette>

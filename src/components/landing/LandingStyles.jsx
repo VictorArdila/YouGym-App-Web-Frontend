@@ -53,7 +53,7 @@ export const Paragraph = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 80%;
   title {
     color: ${({ theme }) => theme.text};
     font-size: 24px;
@@ -257,9 +257,12 @@ export const ForumBody = styled.div`
   background: rgba(255, 255, 255, 0.8);
 `;
 export const ServicesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   margin: 30px;
-  width: 70%;
-  padding: 10px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   h1 {
     color: ${({ theme }) => theme.text};
     text-align: left;
@@ -267,28 +270,72 @@ export const ServicesContainer = styled.div`
     margin-bottom: 20px;
   }
 `;
+export const ServiceForm = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px;
+`;
+export const ServiceListWrapper = styled.div`
+  overflow: hidden;
+  display: flex;
+`;
+
 export const ServiceList = styled.ul`
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  scroll-behavior: smooth;
   gap: 20px;
   padding: 0;
   margin: 0;
 `;
 
 export const ServiceItem = styled.li`
-  background-color: #fff;
+  width: 300px;
+  height: 400px;
+  background: ${({ theme }) => theme.bgSectionTypeTwo};
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  :hover {
+    background: linear-gradient(
+      90.21deg,
+      rgba(130, 5, 5, 0.8) -5.91%,
+      rgba(36, 36, 36, 0.5) 111.58%
+    );
+  }
 `;
 
 export const ServiceTitle = styled.h3`
   font-size: 20px;
-  color: ${({ theme }) => theme.text2};
+  color: ${({ theme }) => theme.text};
 `;
 
 export const ServiceDescription = styled.p`
   font-size: 16px;
-  color: #666;
+  color: ${({ theme }) => theme.text};
+`;
+export const ItemCategory = styled.div`
+  font-size: 16px;
+  color: ${({ theme }) => theme.text};
+  font-weight: 600;
+`;
+export const ItemIcon = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+export const ScrollArrow = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  svg {
+    color: ${({ theme }) => theme.text};
+    height: 30px;
+    width: 35px;
+  }
 `;
