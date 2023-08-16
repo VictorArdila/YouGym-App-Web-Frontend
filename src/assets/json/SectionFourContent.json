@@ -1,0 +1,27 @@
+{
+    "title": "Descubre Nuestros Planes",
+    "plains": [
+        {
+            "name": "🟠 Plan Básico",
+            "price": "X/mes",
+            "item1":"▹ Gestión de clientes",
+            "item2":"▹ Gestión de productos",
+            "item3":"▹ Seguimiento de progreso"
+        },
+        {
+            "name": "🟢 Plan Elite",
+            "price": "XX/mes",
+            "item1":"▹ Todas las características del Plan Básico",
+            "item2":"▹ Soporte premium",
+            "item3":"▹ Gestión avanzada de membresías"
+        },
+        {
+            "name": "🔵 Plan Premium",
+            "price": "XXX/mes",
+            "item1":"▹ Todas las características del Plan Elite",
+            "item2":"▹ Asesoramiento personalizado",
+            "item3":"▹ Acceso a análisis avanzados"
+        }
+    ]
+
+}

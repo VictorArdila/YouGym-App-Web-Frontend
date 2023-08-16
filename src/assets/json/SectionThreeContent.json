@@ -1,27 +1,117 @@
 {
-    "title": "Descubre Nuestros Planes",
-    "plains": [
+    "title": "Servicios que ofrecemos",
+    "services":[
         {
-            "name": "🟠 Plan Básico",
-            "price": "X/mes",
-            "item1":"▹ Gestión de clientes",
-            "item2":"▹ Gestión de productos",
-            "item3":"▹ Seguimiento de progreso"
+            "serviceTitle":"Gestión de Caja Registradora",
+            "serviceDescription":"Administra tus transacciones y efectivo de manera eficiente.",
+            "category":"Caja Registradora",
+            "plan":"Básico"
         },
         {
-            "name": "🟢 Plan Elite",
-            "price": "XX/mes",
-            "item1":"▹ Todas las características del Plan Básico",
-            "item2":"▹ Soporte premium",
-            "item3":"▹ Gestión avanzada de membresías"
+            "serviceTitle":"Gestión de Clientes",
+            "serviceDescription":"Mantén un registro organizado de tus clientes y su información.",
+            "category":"Clientes",
+            "plan":"Básico"
         },
         {
-            "name": "🔵 Plan Premium",
-            "price": "XXX/mes",
-            "item1":"▹ Todas las características del Plan Elite",
-            "item2":"▹ Asesoramiento personalizado",
-            "item3":"▹ Acceso a análisis avanzados"
+            "serviceTitle":"Gestión de Productos",
+            "serviceDescription":"Administra tus productos y controla tu inventario.",
+            "category":"Productos",
+            "plan":"Básico"
+        },
+        {
+            "serviceTitle":"Gestión de Planes",
+            "serviceDescription":"Crea y gestiona diferentes planes y suscripciones.",
+            "category":"Planes",
+            "plan":"Básico"
+        },
+        {
+            "serviceTitle":"Gestión de Entrenadores",
+            "serviceDescription":"Coordina y programa sesiones con entrenadores."
+        },
+        {
+            "serviceTitle":"Gestión de Empleados",
+            "serviceDescription":"Organiza a tu equipo de trabajo de forma efeiciente.",
+            "category":"Empleados",
+            "plan":"Básico"
+        },
+        {
+            "serviceTitle":"Gestión de Horarios",
+            "serviceDescription":"Crea y gestiona horarios de clases y sesiones.",
+            "category":"Horarios",
+            "plan":"Básico"
+        },
+        {
+            "serviceTitle":"Gestión de Pagos",
+            "serviceDescription":"Administra los pagos de tus clientes y suscripciones.",
+            "category":"Pagos",
+            "plan":"Básico"
+        },
+        {
+            "serviceTitle":"Gestión de Reportes",
+            "serviceDescription":"Obtén reportes de tus transacciones y clientes.",
+            "category":"Reportes",
+            "plan":"Élite"
+        },
+        {
+            "serviceTitle":"Gestión de Promociones",
+            "serviceDescription":"Crea y gestiona promociones para tus clientes.",
+            "category":"Promociones",
+            "plan":"Élite"
+        },
+        {
+            "serviceTitle":"Gestión de Membresías",
+            "serviceDescription":"Crea y gestiona membresías para tus clientes.",
+            "category":"Membresías",
+            "plan":"Élite"
+        },
+        {
+            "serviceTitle":"Gestión de Clases",
+            "serviceDescription":"Crea y gestiona clases para tus clientes.",
+            "category":"Clases",
+            "plan":"Élite"
+        },
+        {
+            "serviceTitle":"Gestión de Sesiones",
+            "serviceDescription":"Crea y gestiona sesiones para tus clientes.",
+            "category":"Sesiones",
+            "plan":"Élite"
+        },
+        {
+            "serviceTitle":"Gestión de Citas",
+            "serviceDescription":"Crea y gestiona citas para tus clientes.",
+            "category":"Citas",
+            "plan":"Premium"
+        },
+        {
+            "serviceTitle":"Gestión de Notificaciones",
+            "serviceDescription":"Envía notificaciones a tus clientes y empleados.",
+            "category":"Notificaciones",
+            "plan":"Premium"
+        },
+        {
+            "serviceTitle":"Gestión de Permisos",
+            "serviceDescription":"Administra los permisos de tus empleados.",
+            "category":"Permisos",
+            "plan":"Premium"
+        },
+        {
+            "serviceTitle":"Gestión de Roles",
+            "serviceDescription":"Crea y gestiona roles para tus empleados.",
+            "category":"Roles",
+            "plan":"Premium"
+        },
+        {
+            "serviceTitle":"Gestión de Usuarios",
+            "serviceDescription":"Crea y gestiona usuarios para tu cuenta.",
+            "category":"Usuarios",
+            "plan":"Premium"
+        },
+        {
+            "serviceTitle":"Gestión de Soporte",
+            "serviceDescription":"Obtén soporte y ayuda para tu cuenta.",
+            "category":"Soporte",
+            "plan":"Premium"
         }
     ]
-
 }

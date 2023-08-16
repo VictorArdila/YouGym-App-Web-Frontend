@@ -23,6 +23,15 @@ import {
   PlanFeatures,
   FeatureItem,
   Price,
+  ForumContainer,
+  ForumForm,
+  ForumTitle,
+  ForumBody,
+  ServicesContainer,
+  ServiceList,
+  ServiceItem,
+  ServiceTitle,
+  ServiceDescription,
 } from "./LandingStyles";
 import {
   landing,
@@ -30,10 +39,14 @@ import {
   silhouette,
   silhouette2,
   silhouette3,
+  silhouette4,
+  silhouette5,
   sectionIntroContent,
   sectionOneContent,
   sectionTwoContent,
   sectionThreeContent,
+  sectionFourContent,
+  sectionFiveContent,
 } from "../../assets/Assets";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
@@ -137,7 +150,12 @@ const Landing = () => {
                 </span>
               </p>
             </IntroTitle>
-            <Link to="#" onClick={() => sectionOneRef.current.scrollIntoView({ behavior: "smooth" })}>
+            <Link
+              to="#"
+              onClick={() =>
+                sectionOneRef.current.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <FontAwesomeIcon icon={faAngleDoubleDown} bounce />
             </Link>
           </IntroContainer>
@@ -163,17 +181,33 @@ const Landing = () => {
             <p>{sectionTwoContent.parragraph}</p>
           </Paragraph>
           <Silhouette>
-            <img src={silhouette3} alt="silhouette3" />
+            <img src={silhouette2} alt="silhouette2" />
           </Silhouette>
         </SectionTwo>
         <SectionThree ref={sectionThreeRef}>
+          <ServicesContainer>
+            <h1>{sectionThreeContent.title}</h1>
+            <ServiceList>
+              {sectionThreeContent.services.map((service, index) => (
+                <ServiceItem key={index}>
+                  <ServiceTitle>{service.serviceTitle}</ServiceTitle>
+                  <ServiceDescription>{service.serviceDescription}</ServiceDescription>
+                </ServiceItem>
+              ))}
+            </ServiceList>
+          </ServicesContainer>
+          <Silhouette>
+            <img src={silhouette3} alt="silhouette3" />
+          </Silhouette>
+        </SectionThree>
+        <SectionFour ref={sectionFourRef}>
           <OffersSection>
             <Container>
               <TitleTag>
-                <h1>{sectionThreeContent.title}</h1>
+                <h1>{sectionFourContent.title}</h1>
               </TitleTag>
               <PlansContainer>
-                {sectionThreeContent.plains.map((plan, index) => (
+                {sectionFourContent.plains.map((plan, index) => (
                   <PlanCard
                     key={index}
                     onMouseEnter={() => setHoveredOffer(index)}
@@ -194,11 +228,22 @@ const Landing = () => {
             </Container>
           </OffersSection>
           <Silhouette>
-            <img src={silhouette2} alt="silhouette2" />
+            <img src={silhouette4} alt="silhouette4" />
           </Silhouette>
-        </SectionThree>
-        <SectionFour ref={sectionFourRef}></SectionFour>
-        <SectionFive ref={sectionFiveRef}></SectionFive>
+        </SectionFour>
+        <SectionFive ref={sectionFiveRef}>
+          <ForumContainer>
+            <ForumForm>
+              <ForumTitle>
+                <h1>{sectionFiveContent.title}</h1>
+              </ForumTitle>
+              <ForumBody></ForumBody>
+            </ForumForm>
+          </ForumContainer>
+          <Silhouette>
+            <img src={silhouette5} alt="silhouette5" />
+          </Silhouette>
+        </SectionFive>
       </SectionsContainer>
       <Footer />
     </LandingContainer>

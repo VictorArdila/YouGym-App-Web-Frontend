@@ -12,37 +12,37 @@ export const SectionsContainer = styled.div`
   width: 100%;
   height: auto;
 `;
-export const SectionIntro = styled.div`
+export const SectionIntro = styled.section`
   display: flex;
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.bgSectionTypePresentation};
 `;
-export const SectionOne = styled.div`
+export const SectionOne = styled.section`
   display: flex;
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.bgSectionTypeOne};
 `;
-export const SectionTwo = styled.div`
+export const SectionTwo = styled.section`
   display: flex;
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.bgSectionTypeTwo};
 `;
-export const SectionThree = styled.div`
+export const SectionThree = styled.section`
   display: flex;
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.bgSectionTypeOne};
 `;
-export const SectionFour = styled.div`
+export const SectionFour = styled.section`
   display: flex;
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.bgSectionTypeTwo};
 `;
-export const SectionFive = styled.div`
+export const SectionFive = styled.section`
   display: flex;
   width: 100%;
   height: 100vh;
@@ -164,11 +164,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  svg{
+  svg {
     color: ${({ theme }) => theme.text};
     font-size: 40px;
   }
@@ -183,18 +183,16 @@ export const PlansContainer = styled.div`
 
 export const PlanCard = styled.button`
   flex: 1;
-  margin: 0 10px; 
+  margin: 0 10px;
   padding: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: ${({ theme }) => theme.bgSectionTypeTwo};
   cursor: pointer;
   :hover {
-    background: linear-gradient(100.21deg,
-    rgba(60, 5, 5, 0.8) 10%, /* Ajusta el porcentaje aquí */
-    rgba(26, 26, 26, 0.8) 90%); /* Ajusta el porcentaje aquí */
-    svg{
-      margin-top:30px;
+    background: ${({ theme }) => theme.bgSectionTypeOne};
+    svg {
+      margin-top: 30px;
     }
   }
 `;
@@ -208,7 +206,7 @@ export const PlanTitle = styled.h3`
 export const PlanFeatures = styled.ul`
   list-style-type: none;
   padding: 0;
-  li{
+  li {
     color: ${({ theme }) => theme.text};
     font-size: 22px;
   }
@@ -224,4 +222,73 @@ export const Price = styled.p`
   font-weight: bold;
   margin-top: 20px;
   color: ${({ theme }) => theme.textSidebar};
+`;
+export const ForumContainer = styled.div`
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+export const ForumForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+`;
+export const ForumTitle = styled.div`
+  display: flex;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 8%;
+  align-items: center;
+  color: ${({ theme }) => theme.text};
+  background: ${({ theme }) => theme.text2};
+  h1 {
+    margin-left: 20px;
+  }
+`;
+export const ForumBody = styled.div`
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  color: ${({ theme }) => theme.bgSectionTypeOne};
+  background: rgba(255, 255, 255, 0.8);
+`;
+export const ServicesContainer = styled.div`
+  margin: 30px;
+  width: 70%;
+  padding: 10px 0;
+  h1 {
+    color: ${({ theme }) => theme.text};
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+`;
+export const ServiceList = styled.ul`
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+`;
+
+export const ServiceItem = styled.li`
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+`;
+
+export const ServiceTitle = styled.h3`
+  font-size: 20px;
+  color: ${({ theme }) => theme.text2};
+`;
+
+export const ServiceDescription = styled.p`
+  font-size: 16px;
+  color: #666;
 `;

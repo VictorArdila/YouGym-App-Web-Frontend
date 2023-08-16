@@ -25,9 +25,9 @@ const Header = ({ backgroundColor, sectionRefs }) => {
       block: "start",
     });
   };
-  const handleClick =()=>{
+  const handleClick = () => {
     window.location.href = "/login";
-  }
+  };
   const colorFacebook =
     "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
   const colorWhatsapp =
@@ -66,19 +66,19 @@ const Header = ({ backgroundColor, sectionRefs }) => {
           <ButtoItemMenu
             onClick={() => handleNavigation(sectionRefs.sectionThreeRef)}
           >
-            Ofertas
+            Servicios
           </ButtoItemMenu>
           <DividerItem />
           <ButtoItemMenu
             onClick={() => handleNavigation(sectionRefs.sectionFourRef)}
           >
-            Foro
+            Ofertas
           </ButtoItemMenu>
           <DividerItem />
           <ButtoItemMenu
             onClick={() => handleNavigation(sectionRefs.sectionFiveRef)}
           >
-            Acerca
+            Foro
           </ButtoItemMenu>
           <DividerItem />
         </ConytainerItems>
@@ -100,7 +100,9 @@ const Header = ({ backgroundColor, sectionRefs }) => {
           </ContainerButtonSocial>
         </ContainerSocial>
         <ContainerButtonSign>
-          <ButtonSign background={labelYouGym} onClick={handleClick}>Ingresar</ButtonSign>
+          <ButtonSign background={labelYouGym} onClick={handleClick}>
+            Ingresar
+          </ButtonSign>
         </ContainerButtonSign>
       </ContainerMenuHeader>
     </HeaderContainer>
