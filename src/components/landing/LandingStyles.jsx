@@ -316,15 +316,21 @@ export const ServiceDescription = styled.p`
   color: ${({ theme }) => theme.text};
 `;
 export const ItemCategory = styled.div`
-  font-size: 16px;
+  font-size: 18px;
   color: ${({ theme }) => theme.text};
   font-weight: 600;
 `;
 export const ItemIcon = styled.div`
   display: flex;
   width: 100%;
+  height:60%;
   justify-content: center;
   align-items: center;
+  svg{
+    color: ${({ theme }) => theme.text};
+    height: 60px;
+    width: 60px;
+  }
 `;
 export const ScrollArrow = styled.button`
   display: flex;

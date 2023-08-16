@@ -299,7 +299,7 @@ const Landing = () => {
                       {/* Add other features here */}
                     </PlanFeatures>
                     <Price>${plan.price}/mes</Price>
-                    {hoveredOffer === index && <HoverIcons />}
+                    {hoveredOffer === index && <HoverIconsPlan />}
                   </PlanCard>
                 ))}
               </PlansContainer>
@@ -327,10 +327,11 @@ const Landing = () => {
     </LandingContainer>
   );
 };
-const HoverIcons = () => (
+const HoverIconsPlan = () => (
   <>
     <FontAwesomeIcon icon={faAngleDoubleUp} bounce />
     <FontAwesomeIcon icon={faDumbbell} fade />
   </>
 );
+
 export default Landing;
