@@ -1,4 +1,11 @@
 {
-    "title": "Opiniones y comentarios"
-
+    "title": "Opiniones y comentarios",
+    "titleBody": "Agregar opinión o comentario",
+    "questionBody": "¿Qué opinas de la aplicación? ¿Qué te gustaría que se mejorara?",
+    "addComentary": "Agregar aqui tu comentario",
+    "titleComentary": "Opiniones y comentarios",
+    "commentTitleExample": "¡Buena aplicación!",
+    "commentExample": "Me gusta mucho la aplicación, pero me gustaría que se pudiera agregar más de una foto por producto.",
+    "commentHour": "hace 1 hora",
+    "commentDay": "Hoy"
 }

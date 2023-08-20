@@ -90,7 +90,7 @@ export const Silhouette = styled.div`
   justify-content: end;
   align-items: center;
   img {
-    width: 78%;
+    width: 70%;
     height: 85%;
   }
 `;
@@ -155,23 +155,11 @@ export const ProductImage = styled.img`
   max-width: 50%;
   height: auto;
 `;
-export const OffersSection = styled.section`
-  display: flex;
-  padding: 80px;
-`;
-
-export const Container = styled.div`
+export const OffersContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  svg {
-    color: ${({ theme }) => theme.text};
-    font-size: 40px;
-  }
+  padding: 60px;
+  width: 60%;
 `;
 
 export const PlansContainer = styled.div`
@@ -192,7 +180,9 @@ export const PlanCard = styled.button`
   :hover {
     background: ${({ theme }) => theme.bgSectionTypeOne};
     svg {
+      color: ${({ theme }) => theme.text};
       margin-top: 30px;
+      font-size: 30px;
     }
   }
 `;
@@ -223,38 +213,18 @@ export const Price = styled.p`
   margin-top: 20px;
   color: ${({ theme }) => theme.textSidebar};
 `;
-export const ForumContainer = styled.div`
-  display: flex;
-  width: 70%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-`;
-export const ForumForm = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
-  height: 90%;
-`;
-export const ForumTitle = styled.div`
-  display: flex;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  width: 100%;
-  height: 8%;
   align-items: center;
-  color: ${({ theme }) => theme.text};
-  background: ${({ theme }) => theme.text2};
-  h1 {
-    margin-left: 20px;
+  justify-content: center;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 0 20px;
+  svg {
+    color: ${({ theme }) => theme.text};
+    font-size: 40px;
   }
-`;
-export const ForumBody = styled.div`
-  display: flex;
-  width: 100%;
-  height: 80vh;
-  color: ${({ theme }) => theme.bgSectionTypeOne};
-  background: rgba(255, 255, 255, 0.8);
 `;
 export const ServicesContainer = styled.div`
   display: flex;
@@ -323,10 +293,12 @@ export const ItemCategory = styled.div`
 export const ItemIcon = styled.div`
   display: flex;
   width: 100%;
-  height:60%;
+  height: 60%;
   justify-content: center;
   align-items: center;
-  svg{
+  opacity: ${({ isHovered }) => (isHovered ? 1 : 0)};
+  transition: opacity 0.3s ease-in-out;
+  svg {
     color: ${({ theme }) => theme.text};
     height: 60px;
     width: 60px;
@@ -344,4 +316,136 @@ export const ScrollArrow = styled.button`
     height: 30px;
     width: 35px;
   }
+`;
+
+export const ForumContainer = styled.div`
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ForumForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+`;
+
+export const ForumTitle = styled.div`
+  display: flex;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 8%;
+  align-items: center;
+  color: ${({ theme }) => theme.text};
+  background: ${({ theme }) => theme.text2};
+  h1 {
+    margin-left: 20px;
+  }
+`;
+export const ForumTitleBody = styled.div`
+  display: flex;
+  p {
+    margin-left: 20px;
+    color: ${({ theme }) => theme.text2};
+    font-size: 20px;
+    font-weight: 600;
+  }
+`;
+export const ForumBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  color: ${({ theme }) => theme.bgSectionTypeOne};
+  background: rgba(255, 255, 255, 0.8);
+`;
+export const ForumQuestionBody = styled.div`
+  display: flex;
+  p {
+    margin-left: 20px;
+    color: ${({ theme }) => theme.text2};
+  }
+`;
+export const ForumCommentsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
+`;
+export const ForumComments = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  margin-top: 20px;
+  h3 {
+    color: ${({ theme }) => theme.text2};
+  }
+`;
+export const CommentsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  background: rgba(235, 235, 235, 0.8);
+  border: 0.05px solid ${({ theme }) => theme.text2};
+  width: 90%;
+  height: 100%;
+`;
+export const Comment = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 100%;
+  border: 0.05px solid rgba(29, 29, 29, 0.5);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  h5{
+    color: ${({ theme }) => theme.text2};
+    font-size: 15px;
+  }
+  h6{
+    color: ${({ theme }) => theme.text2};
+    font-size: 12px;
+  }
+  p{
+    color: ${({ theme }) => theme.text2};
+    font-size: 15px;
+  }
+`;
+export const ForumAddComment = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 20px;
+  align-items: center;
+  h3 {
+    color: ${({ theme }) => theme.text2};
+  }
+  input {
+    width: 80%;
+    height: 30px;
+  }
+  textarea {
+    width: 80%;
+    height: 100px;
+  }
+  button {
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid ${({ theme }) => theme.text2};
+    :hover {
+      background: rgba(235, 235, 235, 0.8);
+    }
+  }
+`;
+export const FlexHorizontalText = styled.div`
+display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;

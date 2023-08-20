@@ -10,11 +10,14 @@ const StyledButton = styled.button`
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   width: 65%;
-  height: 3rem;
+  height: 4rem;
   border: none;
   color: white;
   border-radius: 2rem;
   cursor: pointer;
+  :hover{
+    background: linear-gradient(to left, #7D0000 0%, rgb(38, 28, 28) 89%);
+  }
 `;
 export const StyledGoogle = styled(GoogleLogin)`
   height: 3.5rem !important;

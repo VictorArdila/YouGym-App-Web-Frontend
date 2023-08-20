@@ -15,7 +15,7 @@ import {
   TitleTag,
   IntroTitle,
   IntroContainer,
-  OffersSection,
+  OffersContainer,
   Container,
   PlansContainer,
   PlanCard,
@@ -26,7 +26,15 @@ import {
   ForumContainer,
   ForumForm,
   ForumTitle,
+  ForumTitleBody,
   ForumBody,
+  ForumQuestionBody,
+  ForumCommentsContainer,
+  ForumAddComment,
+  ForumComments,
+  Comment,
+  FlexHorizontalText,
+  CommentsContainer,
   ServicesContainer,
   ServiceForm,
   ServiceListWrapper,
@@ -80,6 +88,7 @@ import {
   faBriefcase,
   faUsersViewfinder,
   faHeadset,
+  faClock,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Landing = () => {
@@ -89,6 +98,8 @@ const Landing = () => {
   const sectionFourRef = useRef(null);
   const sectionFiveRef = useRef(null);
   const [hoveredOffer, setHoveredOffer] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [textPresentation, setText] = useState("");
@@ -162,27 +173,6 @@ const Landing = () => {
       listRef.current.scrollLeft += 100;
     }
   };
-  const faIcons = {
-    faCashRegister,
-    faUsers,
-    faBox,
-    faBottleWater,
-    faUserNinja,
-    faUserTie,
-    faCalendar,
-    faCreditCard,
-    faReceipt,
-    faGift,
-    faUsersRays,
-    faGraduationCap,
-    faDumbbell,
-    faCalendarCheck,
-    faBell,
-    faCommentDots,
-    faBriefcase,
-    faUsersViewfinder,
-    faHeadset,
-  };
   return (
     <LandingContainer style={{ backgroundImage: `url(${landing})` }}>
       <Header
@@ -254,17 +244,12 @@ const Landing = () => {
                 <ServiceListWrapper ref={listRef}>
                   <ServiceList>
                     {sectionThreeContent.services.map((service, index) => (
-                      <ServiceItem key={index}>
-                        <ServiceTitle>{service.serviceTitle}</ServiceTitle>
-                        <ServiceDescription>
-                          {service.serviceDescription}
-                        </ServiceDescription>
-                        <ItemCategory>{service.category}</ItemCategory>
-                        <ItemCategory>{service.plan}</ItemCategory>
-                        <ItemIcon>
-                          <FontAwesomeIcon icon={faIcons[service.icon]} />
-                        </ItemIcon>
-                      </ServiceItem>
+                      <Item
+                        key={index}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        service={service} // Pasa los datos del servicio al componente
+                      />
                     ))}
                   </ServiceList>
                 </ServiceListWrapper>
@@ -279,32 +264,32 @@ const Landing = () => {
           </Silhouette>
         </SectionThree>
         <SectionFour ref={sectionFourRef}>
-          <OffersSection>
-            <Container>
+          <OffersContainer>
+            <Paragraph>
               <TitleTag>
                 <h1>{sectionFourContent.title}</h1>
               </TitleTag>
-              <PlansContainer>
-                {sectionFourContent.plains.map((plan, index) => (
-                  <PlanCard
-                    key={index}
-                    onMouseEnter={() => setHoveredOffer(index)}
-                    onMouseLeave={() => setHoveredOffer(null)}
-                  >
-                    <PlanTitle>{plan.name}</PlanTitle>
-                    <PlanFeatures>
-                      <FeatureItem>{plan.item1}</FeatureItem>
-                      <FeatureItem>{plan.item2}</FeatureItem>
-                      <FeatureItem>{plan.item3}</FeatureItem>
-                      {/* Add other features here */}
-                    </PlanFeatures>
-                    <Price>${plan.price}/mes</Price>
-                    {hoveredOffer === index && <HoverIconsPlan />}
-                  </PlanCard>
-                ))}
-              </PlansContainer>
-            </Container>
-          </OffersSection>
+            </Paragraph>
+            <PlansContainer>
+              {sectionFourContent.plains.map((plan, index) => (
+                <PlanCard
+                  key={index}
+                  onMouseEnter={() => setHoveredOffer(index)}
+                  onMouseLeave={() => setHoveredOffer(null)}
+                >
+                  <PlanTitle>{plan.name}</PlanTitle>
+                  <PlanFeatures>
+                    <FeatureItem>{plan.item1}</FeatureItem>
+                    <FeatureItem>{plan.item2}</FeatureItem>
+                    <FeatureItem>{plan.item3}</FeatureItem>
+                    {/* Add other features here */}
+                  </PlanFeatures>
+                  <Price>${plan.price}/mes</Price>
+                  {hoveredOffer === index && <HoverIconsPlan />}
+                </PlanCard>
+              ))}
+            </PlansContainer>
+          </OffersContainer>
           <Silhouette>
             <img src={silhouette4} alt="silhouette4" />
           </Silhouette>
@@ -315,7 +300,49 @@ const Landing = () => {
               <ForumTitle>
                 <h1>{sectionFiveContent.title}</h1>
               </ForumTitle>
-              <ForumBody></ForumBody>
+              <ForumBody>
+                <ForumTitleBody>
+                  <p>{sectionFiveContent.titleBody}</p>
+                </ForumTitleBody>
+                <ForumQuestionBody>
+                  <p>{sectionFiveContent.questionBody}</p>
+                </ForumQuestionBody>
+                <ForumCommentsContainer>
+                  <ForumAddComment>
+                    <h3>{sectionFiveContent.addComentary}</h3>
+                    <br />
+                    <input type="text" placeholder="Escribe tu nombre" />
+                    <br />
+                    <input type="text" placeholder="Escribe tu correo" />
+                    <br />
+                    <input type="text" placeholder="Tema del comentario" />
+                    <br />
+                    <textarea placeholder="Escribe tu comentario" />
+                    <br />
+                    <button>Enviar</button>
+                  </ForumAddComment>
+                  <ForumComments>
+                    <h3>{sectionFiveContent.titleComentary}</h3>
+                    <br />
+                    <CommentsContainer>
+                      <Comment>
+                        <h5>{sectionFiveContent.commentTitleExample}</h5>
+                        <p>{sectionFiveContent.commentExample}</p>
+                        <FlexHorizontalText>
+                          <h6>
+                            <FontAwesomeIcon icon={faCalendarCheck} />
+                            {sectionFiveContent.commentDay}
+                          </h6>
+                          <h6>
+                            <FontAwesomeIcon icon={faClock} />
+                            {sectionFiveContent.commentHour}
+                          </h6>
+                        </FlexHorizontalText>
+                      </Comment>
+                    </CommentsContainer>
+                  </ForumComments>
+                </ForumCommentsContainer>
+              </ForumBody>
             </ForumForm>
           </ForumContainer>
           <Silhouette>
@@ -325,6 +352,44 @@ const Landing = () => {
       </SectionsContainer>
       <Footer />
     </LandingContainer>
+  );
+};
+const Item = ({ service }) => {
+  const faIcons = {
+    faCashRegister,
+    faUsers,
+    faBox,
+    faBottleWater,
+    faUserNinja,
+    faUserTie,
+    faCalendar,
+    faCreditCard,
+    faReceipt,
+    faGift,
+    faUsersRays,
+    faGraduationCap,
+    faDumbbell,
+    faCalendarCheck,
+    faBell,
+    faCommentDots,
+    faBriefcase,
+    faUsersViewfinder,
+    faHeadset,
+  };
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <ServiceItem
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <ServiceTitle>{service.serviceTitle}</ServiceTitle>
+      <ServiceDescription>{service.serviceDescription}</ServiceDescription>
+      <ItemCategory>{service.category}</ItemCategory>
+      <ItemCategory>{service.plan}</ItemCategory>
+      <ItemIcon isHovered={isHovered}>
+        <FontAwesomeIcon icon={faIcons[service.icon]} fade />
+      </ItemIcon>
+    </ServiceItem>
   );
 };
 const HoverIconsPlan = () => (

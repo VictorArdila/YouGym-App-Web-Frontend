@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const BackgroundContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,125 +11,121 @@ export const Container = styled.div`
   background-attachment: fixed;
   background-repeat: no-repeat;
 `;
-export const MainContainer = styled.div`
+export const LoginContainer = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: center;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(125, 5, 5, 0.37);
-  backdrop-filter: blur(8.5px);
-  -webkit-backdrop-filter: blur(8.5px);
-  border-radius: 10px;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.4rem;
+  justify-content:center;
+  width: 70%;
+  height: 80%;
+  //Estilos para modo telefono
+  @media only screen and (max-width: 260px) {
+    width: 80vw;
+    height: 90vh;
+  }
   @media only screen and (max-width: 320px) {
-    width: 80vw;
-    height: 90vh;
-    hr {
-      margin-bottom: 0.3rem;
-    }
-    h4 {
-      font-size: small;
-    }
+    width: 80%;
+    height: 90%;
   }
-  @media only screen and (min-width: 360px) {
-    width: 80vw;
-    height: 80vh;
-    h4 {
-      font-size: small;
-    }
+  @media only screen and (max-width: 360px) {
+    width: 80%;
+    height: 80%;
   }
-  @media only screen and (min-width: 411px) {
-    width: 70vw;
-    height: 85vh;
+  @media only screen and (max-width: 411px) {
+    width: 70%;
+    height: 85%;
   }
-  @media only screen and (min-width: 768px) {
-    width: 70vw;
-    height: 80vh;
+  @media only screen and (max-width: 768px) {
+    width: 70%;
+    height: 80%;
   }
-  @media only screen and (min-width: 1024px) {
-    width: 50vw;
-    height: 90vh;
+  @media only screen and (max-width: 1024px) {
+    width: 75%;
+    height: 60%;
   }
-  @media only screen and (min-width: 1280px) {
-    width: 40vw;
-    height: 90vh;
+`;
+export const LoginSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  width: 50%;
+  height: 95%;
+  background: rgba(245, 245, 245, 0.5);
+  backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  img{
+    width: 20%;
   }
+  h2{
+    margin-top: 10px;
+    font-size: 30px;
+    color: #000000;
+  }
+`;
+export const CardPresentation = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.7);
+  backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  background-size: contain;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease-in-out; /* Agregar la transición CSS */
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)}; /* Controlar la opacidad */
   img {
-    height: 170px;
+    width: 60%;
   }
 `;
-
-export const WelcomeText = styled.h2`
-  text-align: center;
-  margin: 1rem 0 2rem 0;
-`;
-export const ContainerUser = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  svg {
-    margin-right: 0.5rem;
-  }
-`;
-export const ContainerSeePasword = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-export const IconSesion = styled.div`
-  svg {
-    margin-right: 0.5rem;
-  }
-`;
-export const ButtonSeePasword = styled.div``;
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  width: 95%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+`;
+export const ButtonTextForgot = styled.div`
+  width: 76%;
+  color: #000000;
+  text-align: right;
+  font-weight: 600;
+  font-size: 18px;
+  :hover {
+    color: rgba(130, 5, 5);
+  }
+  cursor: pointer;
+`;
+export const ButtonTextRegister = styled.div`
+  width: 76%;
+  color: #000000;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 10px;
+  :hover {
+    color: rgba(130, 5, 5);
+  }
+  cursor: pointer;
+`;
+export const SocialContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 20%;
   width: 100%;
-`;
-
-export const ButtonContainer = styled.div`
-  margin: 1rem 0 1rem 0;
-  width: 100%;
-  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
   align-items: center;
-  justify-content: center;
+  justify-items: space-between; 
+  h3{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 `;
-
-export const LoginWith = styled.h5`
-  cursor: pointer;
-`;
-
-export const HorizontalRule = styled.hr`
-  width: 90%;
-  height: 0.3rem;
-  border-radius: 0.8rem;
-  border: none;
-  background: linear-gradient(to right, rgb(45,45,45,.4) 0%, rgb(25,25,25,.4) 79%);
-  margin: 0.5rem 0 0.5rem 0;
-  backdrop-filter: blur(25px);
-`;
-
-export const IconsContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem 0 1rem 0;
-  width: 80%;
-`;
-
-export const HiperLink = styled.h4`
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  cursor: pointer;
-`;
-export const LabelYouGym = styled.div`
-  display: flex;
-`;
-
