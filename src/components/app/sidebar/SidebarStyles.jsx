@@ -1,283 +1,130 @@
 import styled from "styled-components";
-import { btnReset, v } from "../../../styles/constant/Variables.jsx";
-import { Link } from "react-router-dom";
+import { v } from "../../../styles/constant/Variables";
 
-export const Container = styled.div`
+export const SidebarContainer = styled.div`
   display: flex;
-`;
-export const ContainerSidebar = styled.div`
-  display: flex;
-  background-color: ${({ theme }) => theme.bg};
   flex-direction: column;
-  position: relative;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 4rem;
-  transition: all 300ms ease;
+  background-color: ${({ theme }) => theme.bgSidebar};
+  width: ${({ isOpen }) => (!isOpen ? `77px` : v.sidebarWidth)};
+  box-shadow: 0 0 2.3px ${({ theme }) => theme.border};
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   align-items: center;
-  @media screen and (max-width: 768px) {
-    position: fixed;
-    z-index: 9;
-    background: ${({ theme }) => theme.solidBg};
-    width: 35%;
-    padding-right: 1rem;
-    height: 100%;
-    span {
-      color: ${({ theme }) => theme.textHeader};
-      display: block;
-    }
-    svg {
-      color: ${({ theme }) => theme.textHeader};
-    }
-  }
+  transition: width 0.3s ease;
 `;
-export const ContainerBars = styled.div`
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: flex;
-    position: fixed;
-    height: 1.5rem;
-    width: 1.5rem;
-    transform: ${({ isOpen }) => (!isOpen ? `initial` : `rotate(90deg)`)};
-    background-color: ${({ theme }) => theme.bgAlpha};
-    box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
-    padding: 5px;
-    border-radius: ${v.borderRadius};
-    align-items: center;
-    svg {
-      color: white;
-    }
-    :hover {
-      background-color: ${({ theme }) => theme.bg};
-      border-radius: 6px;
-      width: 1.5rem;
-    }
-  }
-`;
-export const ContainerLogo = styled.div`
+export const SidebarLogoContentainer = styled.div`
   display: flex;
-  height: 4rem;
-  font-weight: bold;
-  font-size: 22px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 3%;
-  margin-bottom: 2rem;
-  span {
-    span {
-      color: ${({ theme }) => theme.Selector};
-    }
-  }
+  height: fit-content;
+  padding: 0.2rem 0;
   img {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: ${({ isOpen }) => (!isOpen ? `77px` : `50%`)};
   }
-  @media screen and (max-width: 1200px) {
-    display: flex;
-    flex-direction: column;
-    img {
-      height: 3.5rem;
-      width: 3.5rem;
-    }
-    span {
-      display: flex;
-      flex-direction: row;
-      font-size: 14px;
-      span {
-        font-size: 16px;
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    img {
-      height: 3.5rem;
-      width: 3.5rem;
-    }
-    span {
-      display: flex;
-      flex-direction: row;
-      font-size: 16px;
-      span {
-        font-size: 18px;
-      }
-    }
+  h1 {
+    font-size: 18px;
+    color: ${({ theme }) => theme.text2};
+    display: ${({ isOpen }) => (!isOpen ? `none` : `block`)};
   }
 `;
-export const ContainerMenu = styled.div`
+
+export const SidebarMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  width: 95%;
+  justify-content: center;
+  h2 {
+    font-size: 16px;
+    color: ${({ theme }) => theme.text2};
+  }
 `;
-export const ContainerMenuItem = styled.div`
+
+export const SidebarMenuTitle = styled.div`
   display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: ${({ isOpen }) => (!isOpen ? `left` : `center`)};
+  h2 {
+    padding: 0.5rem;
+    font-size: 16px;
+    color: ${({ theme }) => theme.text2};
+  }
+`;
+export const SidebarItemTitle = styled.div`
+  display: flex;
+  flex-direction: row;
+  h2 {
+    padding: 0.5rem;
+    font-size: 16px;
+    color: ${({ theme }) => theme.text2};
+    display: ${({ isOpen }) => (!isOpen ? `none` : `block`)};
+    transition: display 0.4s ease;
+  }
+`;
+export const SidebarDivider = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 90%;
+  height: 0.02px;
+  border: 1px solid ${({ theme }) => theme.border};
+  margin-bottom: 8%;
+`;
+export const SidebarMenuItem = styled.div`
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
-  height: 2rem;
+  justify-content: start;
   padding: 0.5rem;
-  position: relative;
-  transition: all 300ms ease;
-  border-radius: ${v.borderRadius};
-  font-size: 14px;
-  margin: 2px 0;
-  &:hover {
-    cursor: pointer;
-    box-shadow: inset 0 0 0 1px ${({ theme }) => theme.hoverSelection};
+  border-radius: 0.5rem;
+  border: 1px solid ${({ theme }) => theme.border};
+  box-shadow: 0 0 2px ${({ theme }) => theme.border};
+  height: 3rem;
+  transition: background-color 0.3s ease;
+  h3 {
+    display: ${({ isOpen }) => (!isOpen ? `none` : `block`)};
+    font-size: 16px;
+    color: ${({ theme }) => theme.text2};
+    text-align: center;
+    transition: display 0.3s ease;
   }
-  &:last-child {
-    bottom: 0rem;
-    width: 100%;
-  }
-  &:active {
-    background: var(--activeItem);
-    margin-left: 0;
-  }
-  &:active::before {
-    content: "";
-    width: 8px;
-    height: 100%;
-    background: var(--pink);
-    margin-right: calc(1rem - 8px);
-  }
-  @media screen and (max-width: 1200px) {
-    span {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    span {
-      display: block;
-    }
-    .last-child {
-      position: relative;
-      margin-top: 2rem;
-    }
-  }
-`;
-export const Divider = styled.div`
-  height: 1px;
-  width: 100%;
-  background: ${({ theme }) => theme.bg3};
-  margin: ${v.tdSpacing} 0;
-`;
-export const STheme = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  margin-top: 0.2rem;
-`;
-export const SThemeLabel = styled.span`
-  display: block;
-  flex: 1;
-`;
-export const SThemeToggler = styled.button`
-  ${btnReset};
-  margin: 0 auto;
-  cursor: pointer;
-  width: 36px;
-  height: 20px;
-  border-radius: 10px;
-  background: ${({ theme }) => theme.bgThemeToggler};
-  position: relative;
-`;
-export const IconModeTheme = styled.div`
-  img {
-    height: 16px;
-  }
-`;
-export const SToggleThumb = styled.div`
-  height: 18px;
-  width: 18px;
-  transform: ${({ isOpen }) => (!isOpen ? `rotate(0deg)` : `rotate(180deg)`)};
-  position: absolute;
-  top: 1px;
-  bottom: 1px;
-  transition: 0.2s ease right;
-  right: calc(100% - 18px - 1px);
-  border-radius: 50%;
-  background: ${({ theme }) => theme.bgToggleThumb};
-  justify-content: center;
-  align-items: center;
-  display: flex;
-`;
-
-export const SLinkContainer = styled.div`
-  background-color: ${({ theme, isActive }) =>
-    !isActive ? `transparent` : theme.Selector};
-  border-radius: ${v.borderRadius};
-  margin: 2px 0;
   svg {
-    color: ${({ theme, isActive }) =>
-      !isActive ? theme.iconMenu : theme.svgSidebarMenuActive};
-  }
-  span {
-    color: ${({ theme, isActive }) =>
-      !isActive ? theme.textMenu : theme.svgSidebarMenuActive};
+    margin: 0 1rem;
+    font-size: 20px;
+    color: ${({ theme }) => theme.text2};
   }
   :hover {
-    box-shadow: inset 0 0 0 1px ${({ theme }) => theme.hoverSelection};
-  }
-  @media screen and (max-width: 1200px) {
-    span {
-      font-size: 12px;
+    background: linear-gradient(${({ theme }) => theme.Selector});
+    background-color: transparent; /* Hacemos el fondo transparente para mostrar el gradiente */
+    color: white; /* Cambiamos el color de texto para que sea legible */
+    transition: background-color 0.3s ease;
+    h3 {
+      color: ${({ theme }) => theme.text};
     }
-  }
-`;
-
-export const SLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  font-size: 16px;
-  padding: calc(${v.smSpacing} - 2px) 0;
-`;
-
-export const SLinkIcon = styled.div`
-  padding: ${v.smSpacing} ${v.ndxSpacing};
-  display: flex;
-  img {
-    height: 30px;
-  }
-  svg {
-    font-size: 20px;
-  }
-  @media screen and (max-width: 1200px) {
-    padding: 0rem 0rem;
     svg {
-      height: 14px;
+      color: ${({ theme }) => theme.text};
     }
   }
+  cursor: pointer;
 `;
-
-export const SLinkLabel = styled.span`
-  margin: 0.3rem;
-  display: ${({ isOpen }) => (!isOpen ? `none` : `block`)};
-  flex: 1;
-  height: fit-content;
-  margin-left: ${v.smSpacing};
-  font-size: 14px;
-`;
-
-export const SLinkNotification = styled.div`
-  font-size: 14px;
-  padding: calc(${v.smSpacing} / 2) ${v.smSpacing};
-  border-radius: calc(${v.borderRadius} / 2);
-  background: ${({ theme }) => theme.primary};
-  color: white;
-  margin-right: ${v.mdSpacing};
-`;
-export const ContainerProfileInfo = styled.div`
+export const SidebarMenuSettings = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: auto;
-  align-items: center;
+  justify-content: center;
+  h2 {
+    font-size: 16px;
+    color: ${({ theme }) => theme.text2};
+  }
 `;
-
-export const ContentUserInfo = styled.div`
+export const SidebarMenuOut = styled.div`
   display: flex;
-  flex-direction:column;
-  width: 60%;
-  height: auto;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  h2 {
+    font-size: 16px;
+    color: ${({ theme }) => theme.text2};
+  }
 `;

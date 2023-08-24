@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const LandingContainer = styled.div`
+export const LandingContainer = styled.main`
   width: 100vw;
   height: 100%;
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 `;
 export const SectionsContainer = styled.div`
   display: flex;
@@ -74,7 +75,7 @@ export const SilhouettePresentation = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 70%;
+  width: 40%;
   justify-content: end;
   align-items: center;
   img {
@@ -111,7 +112,7 @@ export const TitleTag = styled.div`
 export const IntroContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
   height: 80%;
   align-items: center;
   justify-content: center;
@@ -404,15 +405,15 @@ export const Comment = styled.div`
   border: 0.05px solid rgba(29, 29, 29, 0.5);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.8);
-  h5{
+  h5 {
     color: ${({ theme }) => theme.text2};
     font-size: 15px;
   }
-  h6{
+  h6 {
     color: ${({ theme }) => theme.text2};
     font-size: 12px;
   }
-  p{
+  p {
     color: ${({ theme }) => theme.text2};
     font-size: 15px;
   }
@@ -442,10 +443,15 @@ export const ForumAddComment = styled.div`
     :hover {
       background: rgba(235, 235, 235, 0.8);
     }
+    cursor: pointer;
   }
 `;
 export const FlexHorizontalText = styled.div`
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  p{
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;

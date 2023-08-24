@@ -5,7 +5,7 @@ import {
   ContainerMenuHeader,
   ContainerSocial,
   ContainerButtonSign,
-  ConytainerItems,
+  ContainerItems,
   DividerItem,
   ButtoItemMenu,
   ButtonSign,
@@ -26,7 +26,7 @@ const Header = ({ backgroundColor, sectionRefs }) => {
     });
   };
   const handleClick = () => {
-    window.location.href = "/login";
+    window.location.href = "/Iniciar-sesion";
   };
   const colorFacebook =
     "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
@@ -49,7 +49,7 @@ const Header = ({ backgroundColor, sectionRefs }) => {
         </span>
       </ContainerLogo>
       <ContainerMenuHeader>
-        <ConytainerItems>
+        <ContainerItems>
           <DividerItem />
           <ButtoItemMenu
             onClick={() => handleNavigation(sectionRefs.sectionOneRef)}
@@ -81,7 +81,7 @@ const Header = ({ backgroundColor, sectionRefs }) => {
             Foro
           </ButtoItemMenu>
           <DividerItem />
-        </ConytainerItems>
+        </ContainerItems>
         <ContainerSocial>
           <ContainerButtonSocial
             background={colorInstagram}

@@ -1,107 +1,97 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import {
-  ContainerSidebar,
-  ContainerBars,
-  ContainerLogo,
-  ContainerMenu,
-  Divider,
-  STheme,
-  SThemeToggler,
-  SToggleThumb,
-  IconModeTheme,
-  ContainerProfileInfo,
+  SidebarContainer,
+  SidebarLogoContentainer,
+  SidebarMenuContainer,
+  SidebarMenuTitle,
+  SidebarDivider,
+  SidebarItemTitle,
+  SidebarMenuItem,
+  SidebarMenuSettings,
+  SidebarMenuOut,
 } from "./SidebarStyles.jsx";
-import { logoPNG, modeDark, modeLight } from "../../../assets/Assets";
-import {
-  profileArray,
-  linksArray,
-  secondaryLinksArray,
-  settingsLinksArray,
-} from "./data/SidebarData";
-import Menu from "./dropdown/menu/Menu";
-import Profile from "./dropdown/profile/Profile";
-import { motion } from "framer-motion";
-import { faAngleLeft, faBars } from "@fortawesome/free-solid-svg-icons";
+import { logoPNG } from "../../../assets/Assets.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ThemeContext } from "../../../App";
+import {
+  faBottleWater,
+  faBox,
+  faCashRegister,
+  faCog,
+  faGraduationCap,
+  faRightFromBracket,
+  faUser,
+  faUserNinja,
+  faUsersRays,
+} from "@fortawesome/free-solid-svg-icons";
 
-const Sidebar = ({ user }) => {
-  const [expanded, setExpaned] = useState(true);
-  const { setTheme, theme } = useContext(ThemeContext);
-  const [changeTheme, setChangeTheme] = useState(false);
-  const sidebarVariants = {
-    true: {
-      left: "0",
-    },
-    false: {
-      left: "-60%",
-    },
-  };
-  console.log(window.innerWidth);
+const Sidebar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  function outSesion() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    window.location.href = "/Iniciar-sesion";
+  }
   return (
-    <>
-      <ContainerBars
-        style={expanded ? { left: "38%" } : { left: "5%" }}
-        onClick={() => setExpaned(!expanded)}
-        isOpen={expanded}
-      >
-        <FontAwesomeIcon icon={faBars} />
-      </ContainerBars>
-      <ContainerSidebar
-        as={motion.div}
-        variants={sidebarVariants}
-        animate={window.innerWidth <= 768 ? `${expanded}` : ""}
-      >
-        {/* logo */}
-        <ContainerLogo>
-          <img src={logoPNG} alt="logo" />
-          <span>
-            You<span>G</span>ym
-          </span>
-        </ContainerLogo>
-        <Divider />
-        <ContainerProfileInfo>
-          {profileArray.map((item, index) => {
-            return <Profile isOpen={expanded} item={item} key={index} />;
-          })}
-        </ContainerProfileInfo>
-        <ContainerMenu>
-          <Divider />
-          {linksArray.map((item, index) => {
-            return <Menu isOpen={expanded} item={item} key={index} />;
-          })}
-          {/* signoutIcon */}
-          <Divider />
-          {settingsLinksArray.map((item, index) => {
-            return <Menu isOpen={expanded} item={item} key={index} />;
-          })}
-          <Divider />
-          {secondaryLinksArray.map((item, index) => {
-            return <Menu isOpen={expanded} item={item} key={index} />;
-          })}
-        </ContainerMenu>
-        <STheme>
-          <IconModeTheme>
-            <img src={modeLight} alt="logo" />
-          </IconModeTheme>
-          <SThemeToggler
-            isActive={theme === "dark"}
-            onClick={() => setTheme((p) => (p === "light" ? "dark" : "light"))}
-          >
-            <SToggleThumb
-              style={theme === "dark" ? { right: "1px" } : {}}
-              isOpen={changeTheme}
-              onClick={() => setChangeTheme((p) => !p)}
-            >
-              <FontAwesomeIcon icon={faAngleLeft} />
-            </SToggleThumb>
-          </SThemeToggler>
-          <IconModeTheme>
-            <img src={modeDark} alt="logo" />
-          </IconModeTheme>
-        </STheme>
-      </ContainerSidebar>
-    </>
+    <SidebarContainer
+      isOpen={sidebarOpen}
+      onMouseEnter={() => setSidebarOpen((p) => !p)}
+      onMouseLeave={() => setSidebarOpen((p) => !p)}
+    >
+      <SidebarLogoContentainer isOpen={sidebarOpen}>
+        <img src={logoPNG} alt="logo" />
+        <h1>YouGym App</h1>
+      </SidebarLogoContentainer>
+      <SidebarMenuContainer>
+        <SidebarMenuTitle isOpen={!sidebarOpen}>
+          <h2>Menu</h2>
+        </SidebarMenuTitle>
+        <SidebarDivider />
+        <SidebarMenuItem isOpen={sidebarOpen}>
+          <FontAwesomeIcon icon={faCashRegister} />
+          <h3>Caja</h3>
+        </SidebarMenuItem>
+        <SidebarMenuItem isOpen={sidebarOpen}>
+          <FontAwesomeIcon icon={faUser} />
+          <h3>Clientes</h3>
+        </SidebarMenuItem>
+        <SidebarMenuItem isOpen={sidebarOpen}>
+          <FontAwesomeIcon icon={faUserNinja} />
+          <h3>Entrenadores</h3>
+        </SidebarMenuItem>
+        <SidebarMenuItem isOpen={sidebarOpen}>
+          <FontAwesomeIcon icon={faGraduationCap} />
+          <h3>Clases</h3>
+        </SidebarMenuItem>
+        <SidebarMenuItem isOpen={sidebarOpen}>
+          <FontAwesomeIcon icon={faBox} />
+          <h3>Productos</h3>
+        </SidebarMenuItem>
+        <SidebarMenuItem isOpen={sidebarOpen}>
+          <FontAwesomeIcon icon={faBottleWater} />
+          <h3>Planes</h3>
+        </SidebarMenuItem>
+        <SidebarMenuItem isOpen={sidebarOpen}>
+          <FontAwesomeIcon icon={faUsersRays} />
+          <h3>Membresias</h3>
+        </SidebarMenuItem>
+        <SidebarMenuSettings>
+          <SidebarItemTitle isOpen={sidebarOpen}>
+            <h2>Configuración</h2>
+          </SidebarItemTitle>
+          <SidebarDivider />
+          <SidebarMenuItem isOpen={sidebarOpen}>
+            <FontAwesomeIcon icon={faCog} spin />
+            <h3>Ajustes</h3>
+          </SidebarMenuItem>
+        </SidebarMenuSettings>
+        <SidebarMenuOut>
+          <SidebarMenuItem onClick={outSesion} isOpen={sidebarOpen}>
+            <FontAwesomeIcon icon={faRightFromBracket} />
+            <h3>Cerrar sesión</h3>
+          </SidebarMenuItem>
+        </SidebarMenuOut>
+      </SidebarMenuContainer>
+    </SidebarContainer>
   );
 };
 

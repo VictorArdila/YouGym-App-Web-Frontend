@@ -7,10 +7,11 @@ export const Button = ({ content }) => {
 
 const StyledButton = styled.button`
   background: linear-gradient(to right, #7D0000 0%, #00000c 79%);
+  color: white;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  width: 65%;
-  height: 4rem;
+  width: 50%;
+  height: 32px;
   border: none;
   color: white;
   border-radius: 2rem;
@@ -18,6 +19,7 @@ const StyledButton = styled.button`
   :hover{
     background: linear-gradient(to left, #7D0000 0%, rgb(38, 28, 28) 89%);
   }
+
 `;
 export const StyledGoogle = styled(GoogleLogin)`
   height: 3.5rem !important;

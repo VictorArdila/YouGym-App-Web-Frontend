@@ -35,7 +35,7 @@ export const ContainerMenuHeader = styled.div`
   height: 3rem;
   justify-content: end;
 `;
-export const ConytainerItems = styled.div`
+export const ContainerItems = styled.div`
   display: flex;
   width: 78%;
   height: 3rem;
@@ -55,7 +55,7 @@ export const ContainerButtonSocial = styled.div`
   border-radius: 25px;
   width: 2rem;
   height: 2rem;
-  background-color: ${({ theme }) => theme.glass};
+  background: rgba(255, 255, 255, 0.2);
   align-items: center;
   justify-content: center;
   :hover {
@@ -94,6 +94,7 @@ export const ButtoItemMenu = styled.div`
     background-color: ${({ theme }) => theme.glass};
     color: black;
   }
+  cursor: pointer;
 `;
 export const ButtonSocial = styled(FontAwesomeIcon)`
   display: flex;
@@ -101,13 +102,14 @@ export const ButtonSocial = styled(FontAwesomeIcon)`
   height: 1.2rem;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 export const ButtonSign = styled.div`
   display: flex;
   border: none;
   border-radius: 4px;
-  color: ${({ theme }) => theme.background};
-  background-color: ${({ theme }) => theme.Selector};
+  color: white;
+  background-color: rgba(130, 5, 5);
   width: 5rem;
   height: 2rem;
   align-items: center;

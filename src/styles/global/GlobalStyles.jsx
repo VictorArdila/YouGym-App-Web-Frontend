@@ -10,5 +10,6 @@ export const GlobalStyle = createGlobalStyle`
       color: ${({ theme }) => theme.text};
       font-family: 'Roboto', sans-serif;
       letter-spacing: .6px;
+      overflow-x: hidden;
     }  
 `;

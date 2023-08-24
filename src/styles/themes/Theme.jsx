@@ -3,16 +3,16 @@ export const lightTheme = {
     bgSectionTypePresentation: "rgb(15,15,15, 0.9)",
     bgSectionTypeOne: "rgb(15,15,15, 0.7)",
     bgSectionTypeTwo: "rgba(50,50,50,.6)",
-    background: "rgb(255,255,255)",
-    glass:"rgba(225, 225, 225, 0.64)",
+    background: "rgb(255,255,255, 0.64)",
+    glass:"rgba(250, 250, 250)",
     text:"rgb(255,255,255)",
     text2:"rgb(15,15,15)",
     text3:"rgb(130,5,5)",
     //Sidebar
-    bg: "rgba(50,50,50,.2)",
+    bgSidebar: "rgba(230, 230, 230, 0.5)",
     solidBg: "rgba(50,50,50,.9)",
     border: "rgb(15,15,15,.5)",
-    Selector: "rgb(140,3,3)",
+    Selector: "to right, rgba(135, 22, 30) 0%, rgba(255, 153, 153) 79%",
     svgSidebarMenuActive:"rgb(230,230,230)",
     textMenu:"rgba(15,15,15)",
     hoverSelection:"rgb(50,50,50)",
@@ -23,33 +23,23 @@ export const lightTheme = {
     bgThemeToggler: "rgba(15,15,15)",
     bgToggleThumb: "rgb(230,230,230)",
     primary: "rgb(238, 229, 0)",
-    iconColor:"rgb(238, 229, 134)",
-    textSidebar:"rgb(238, 229, 134)",
-    textDarkMode: "rgb(238, 229, 134)",
     //Header
-    Title:"rgb(230,230,230)",
-    bgTitle:"rgb(140,3,3)",
-    bgHeader: "rgba(15,15,15)",
-    textNotify:"rgb(15,15,15)",
-    textHeader:"rgb(230,230,230)",
-    bgSVG:"rgb(230,230,230)",
-    //Dropdown
-    bgDrpdown: "rgba(30,30,30,.7)",
-    //Container
-    bg2: "rgb(225,225,225,.9)",
-    //DashBoard CatchTweets
-    bgDashCatchTweets: "rgb(255,255,255)",
+    bgHeaderProfile:"rgba(244, 244, 234, 0.8)",
+    textHeader:"rgba(20, 20, 20, 0.7)",
+    //App
+    bgApp: "rgba(240, 240, 240,.9)",
 };
 export const darkTheme = {
     background: "rgb(40,40,40)",
     glass:"rgba(25, 25, 25, 0.54)",
     text:"rgb(255,255,255)",
+    text2:"rgb(255,255,255)",
     //Sidebar
-    bg: "rgb(16,16,16)",
+    bgSidebar: "rgb(16,16,16, .18)",
     solidBg: "rgba(16,16,16,.9)",
     border: "rgb(40,40,40,.6)",
     iconModeDark:"rgb(238, 229, 134)",
-    Selector: "rgb(252,156,130,.7)",
+    Selector: "to right, rgba(135, 22, 30) 0%, rgba(25, 25, 23) 79%",
     svgSidebarMenuActive:"rgba(15,15,15)",
     textMenu:"rgba(230,230,230)",
     hoverSelection:"rgb(50,50,50)",
@@ -59,21 +49,11 @@ export const darkTheme = {
     bgThemeToggler: "rgba(230,230,230)",
     bgToggleThumb: "rgba(15,15,15)",
     primary: "rgb(238, 229, 0)",
-    iconColor:"rgb(230,230,230)",
-    textSidebar:"rgb(230,230,230)",
-    textDarkMode: "rgb(230,230,230)",
     //Dropdown
     bgDrpdown: "rgba(60,60,60,.5)",
     //Header
-    Title:"rgb(252,156,134,.5)",
-    bgTitle:"rgba(16,16,16)",
-    bgHeader: "rgba(16,16,16)",
-    textNotify:"rgb(15,15,15)",
-    textHeader:"rgb(230,230,230)",
-    bgSVG:"rgb(252,156,134,.5)",
-    //Container
-    bg2: "rgb(40,40,40)",
-    text: "rgb(210,210,210)",
-    //DashBoard CatchTweets
-    bgDashCatchTweets: "rgb(25,25,25)",
+    bgHeaderProfile:"rgba(60,60,60,.5)",
+    textHeader:"rgba(255, 255, 255)",
+    //App
+    bgApp: "rgb(40,40,40)",
 };

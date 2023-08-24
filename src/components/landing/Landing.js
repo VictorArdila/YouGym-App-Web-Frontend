@@ -337,6 +337,7 @@ const Landing = () => {
                             <FontAwesomeIcon icon={faClock} />
                             {sectionFiveContent.commentHour}
                           </h6>
+                          <p>Responder</p>
                         </FlexHorizontalText>
                       </Comment>
                     </CommentsContainer>

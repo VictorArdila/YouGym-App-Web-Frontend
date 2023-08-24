@@ -25,9 +25,9 @@ const App = () => {
           />
         </Helmet>
         <>
-        <LayoutApp>
-              <Routes />
-            </LayoutApp>
+          <LayoutApp>
+            <Routes />
+          </LayoutApp>
         </>
       </ThemeProvider>
     </ThemeContext.Provider>

@@ -1,18 +1,17 @@
 import React from "react";
-import Header from "../header/Header";
-import MainDash from "../container/MainDash";
-// import RightSide from "../container/rigtSide/RightSide";
-import Sidebar from "../sidebar/Sidebar";
-import { Container, AppGlass } from "./LayoutStyles.jsx";
+import { Container, AppGlass, AppContent } from "./LayoutStyles.jsx";
+import Sidebar from "../sidebar/Sidebar.js";
+import Header from "../header/Header.js";
 
-const Layout = () => {
+const Layout = ({children}) => {
   return (
     <Container>
-      <Header />
       <AppGlass>
-        <Sidebar/>
-        <MainDash />
-        
+        <Sidebar />
+        <AppContent>
+          <Header />
+          {children}
+        </AppContent>
       </AppGlass>
     </Container>
   );

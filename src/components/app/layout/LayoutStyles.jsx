@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: ${({ theme }) => theme.text};
-  background: ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.bgApp};
   height: 100vh;
   display: flex;
   flex-direction:column;
@@ -11,19 +11,19 @@ export const Container = styled.div`
   font-family: "Inter", sans-serif;
 `;
 export const AppGlass = styled.div`
-  display: grid;
-  height: 97%;
-  width: 97%;
+  display: flex;
+  flex-direction: row;
+  height: 95%;
+  width: 95%;
   background: ${({ theme }) => theme.glass};
+  box-shadow: 0 8px 32px 0 rgba(31, 31, 35, 0.37);
+  backdrop-filter: blur(4px);
   border-radius: 2rem;
-  gap: 16px;
-  grid-template-columns: 11rem auto 20rem;
-  overflow: hidden;
-  @media screen and (max-width: 1200px) {
-    grid-template-columns: 10% 50% auto;
-    overflow-y: scroll;
-  }
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
+`;
+export const AppContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 98%;
+  width: -webkit-fill-available;
+  align-items: center;
 `;
